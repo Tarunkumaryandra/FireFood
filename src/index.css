@@ -1,13 +1,28 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes moveRight {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(700%);
+    }
+  }
+  
+  .animate-moveRight {
+    animation: moveRight 8s linear infinite;
+  }
+  
+/* Apply background color to all pages */
+* {
+  background-color: #fbfbfd;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Override background color for error page */
+.erropage {
+  background-color: #fff; /* or any other desired color */
 }
+
+  
